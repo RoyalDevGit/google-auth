@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
+import GoogleAuth from './components/GoogleAuth';
 import './App.css';
 
 function App() {
+  const [googleAccessToken, setGoogleAccessToken] = useState<string>('');
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +22,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <GoogleAuth />
+      
     </div>
   );
 }
